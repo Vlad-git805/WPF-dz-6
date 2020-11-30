@@ -1,0 +1,118 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button x:Name="Bold" Click="Bold_Click">
+                    <Bold>Bold</Bold>
+                </Button>
+                <Button Click="Button_Click">
+                    <Italic>Italic</Italic>
+                </Button>
+                <Button Click="under_line_Click">
+                    <Underline>Underline</Underline>
+                </Button>
+                <Button>
+                    Clear
+                </Button>
+            </ToolBar>
+            <ToolBar Band="1" BandIndex="2">
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center">Font Size:</TextBlock>
+                <ComboBox Name="comboBox_font_size" IsReadOnly="True" Margin="5,0,0,0" Width="30" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                    <ComboBoxItem>26</ComboBoxItem>
+                    <ComboBoxItem>28</ComboBoxItem>
+                    <ComboBoxItem>36</ComboBoxItem>
+                    <ComboBoxItem>48</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+            <ToolBar Band="1" BandIndex="3">
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center">Color:</TextBlock>
+                <ComboBox Name="combo_box_color" IsReadOnly="True" Margin="5,0,0,0" Width="80" SelectionChanged="Combo_box_color_SelectionChanged">
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Black" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Black</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Blue" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Blue</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Green" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Green</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Orange" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Orange</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Purple" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Purple</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Red" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Red</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Yellow" Height="10" Width="10"/>
+                            <TextBlock Margin="5,0,0,0">Yellow</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+            <ToolBar Band="2">
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center">Start:</TextBlock>
+                <TextBox Margin="0" Width="30" VerticalAlignment="Bottom" Name="start">0</TextBox>
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center">End:</TextBlock>
+                <TextBox Margin="0" Width="30" VerticalAlignment="Top" Name="end">0</TextBox>
+            </ToolBar>
+        </ToolBarTray>
+        <RichTextBox x:Name="text" Margin="20">
+            <FlowDocument>
+                <Paragraph x:Name="parag">
+                    <Run Name="textRun">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit magna sed 
+            eros fermentum congue. Fusce turpis ante, sodales vitae urna at, feugiat commodo ipsum. 
+            Praesent viverra diam vel lacinia ultricies. Quisque vulputate orci quam, id vestibulum urna vulputate nec. 
+            Nunc pharetra ligula at egestas efficitur. Sed eget tortor eros. Proin nec hendrerit magna. Pellentesque commodo fauc
+            ibus lacus, eu vehicula nunc bibendum sed.Etiam ultricies felis id risus cursus laoreet. Pellentesque vel risus augue. Fusce tristiqu
+            e massa eget elementum laoreet. In vitae mi eget eros consequat porta facilisis non lectus. Aenean facilisis odio sit amet diam facilisis maximus
+            laoreet non magna. Duis fermentum tincidunt tempor. Nunc ultrices nulla in elit laoreet, non lobortis lectus egestas.rcu aliquam ac. Aenean a nunc vehicula, 
+            facilisis dui id, laoreet lectus. Mauris at purus at urna tincidunt commodo quis id nunc. Donec arcu risus, ornare vitae felis ut, cursus dignissim nulla. Mau
+            ris at maximus massa, quis sagittis lectus. Vestibulum aliquet pretium nulla a sodales. Aliquam erat volutpat. Donec lacinia lacus libero, et elementum eros 
+            commodo eu. Nam mattis libero quis rutrum mollis.
+                    </Run>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </DockPanel>
+</Window>
